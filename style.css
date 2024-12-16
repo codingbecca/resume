@@ -1,0 +1,126 @@
+body {
+  background-color: #06161e;
+  font-family: "Raleway", sans-serif;
+  color: aliceblue;
+}
+hr  {
+    color: aliceblue;
+}
+#resume {
+  width: 85vw;
+  max-width: 1160px;
+  margin: 30px auto;
+  background-color: #081f2b;
+  padding: 10px 20px;
+}
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 30px;
+}
+img {
+  width: 100px;
+  align-self: flex-start;
+}
+#information {
+  margin-left: auto;
+  text-align: right;
+}
+#professionalSummary {
+  align-self: flex-end;
+}
+a {
+  color: #b8e7ff;
+}
+a:visited {
+  color: #66ccff;
+}
+h1,
+h2,
+ul {
+  padding: 0;
+  margin: 0;
+}
+h3,
+h4 {
+  margin-bottom: 5px;
+}
+ul {
+  list-style-type: none;
+}
+.mainSection {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap-reverse;
+}
+main {
+  width: 66%;
+  min-width: 500px;
+  padding-top: 30px;
+}
+aside {
+  width: 33%;
+  max-width: 250px;
+  margin-left: auto;
+  padding-left: 20px;
+}
+.sectionDetail {
+  display: flex;
+  flex-wrap: wrap;
+}
+.date {
+  margin-left: auto;
+}
+label {
+  margin-bottom: 20px;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+/* styling for collapsible sections 
+I followed this tutorial https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390 */
+.collapsibleSection label {
+  cursor: pointer;
+  background: url("./images/arrow_drop_down.png") no-repeat left center;
+  background-size: contain;
+  padding-left: 20px;
+}
+input.sectionTitle {
+  display: none;
+}
+.sectionContent {
+  max-height: 20px;
+  overflow: hidden;
+}
+input:checked ~ label {
+  background-image: url(./images/arrow_drop_up.png);
+  background-size: contain;
+}
+input:checked ~ .sectionContent {
+  max-height: 100%;
+}
+
+/* media query to adjust formatting on smaller screens. Breakpoint determined using chrome devtools */
+@media only screen and (max-width: 935px) {
+  img {
+    margin: auto;
+  }
+  .mainSection {
+    display: flex;
+    justify-content: center;
+  }
+  .sectionDetail {
+    column-gap: 40px;
+  }
+  .date {
+    margin-left: 0;
+  }
+  aside {
+    margin-left: 0;
+  }
+  main {
+    min-width: 0;
+  }
+}
