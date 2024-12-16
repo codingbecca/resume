@@ -38,8 +38,7 @@ a:visited {
   color: #66ccff;
 }
 h1,
-h2,
-ul {
+h2 {
   padding: 0;
   margin: 0;
 }
@@ -47,8 +46,10 @@ h3,
 h4 {
   margin-bottom: 5px;
 }
-ul {
+.info {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .mainSection {
   display: flex;
@@ -59,6 +60,9 @@ main {
   width: 66%;
   min-width: 500px;
   padding-top: 30px;
+}
+.sectionDetail p {
+  padding-left: 40px;
 }
 aside {
   width: 33%;
